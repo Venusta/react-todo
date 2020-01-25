@@ -5,13 +5,20 @@
 import React from "react";
 
 const List = (props) => (
-  <ul>
+  <ol>
     {props.items.map((item, index) => <TodoItem key={`listItem${index}`} item={item} />)}
-  </ul>
+  </ol>
 );
-
 const TodoItem = (props) => (
-  <li>{props.item}</li>
+  <li>
+    {<input
+      name="isGoing"
+      type="checkbox"
+      // checked={this.state.isGoing} // TODO this shit
+      // onChange={this.handleInputChange}
+    />}
+    {props.item}
+  </li>
 );
 
 export default List;

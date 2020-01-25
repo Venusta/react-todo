@@ -13,7 +13,7 @@ class Todos extends Component {
 
   handleInputFormChange = (value) => {
     this.setState({
-      value: value,
+      value,
     });
   }
 
