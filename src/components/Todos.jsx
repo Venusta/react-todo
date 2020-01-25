@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 import List from "./List";
 
-class InputForm extends Component {
+class Todos extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -47,4 +47,4 @@ class InputForm extends Component {
   }
 }
 
-export default InputForm;
+export default Todos;
