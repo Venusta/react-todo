@@ -7,15 +7,13 @@ import React, { Component } from "react";
 export default class InputForm extends Component {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.props.onValueChange(event.target.value.toUpperCase());
   }
 
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     this.props.onCancer();
     event.preventDefault();
   }

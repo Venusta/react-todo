@@ -9,18 +9,15 @@ class Todos extends Component {
       value: "testtt",
       items: ["KANKER", "KUT"],
     };
-
-    this.handleInputFormChange = this.handleInputFormChange.bind(this);
-    this.handleInputFormSubmit = this.handleInputFormSubmit.bind(this);
   }
 
-  handleInputFormChange(FUCK) {
+  handleInputFormChange = (FUCK) => {
     this.setState({
       value: FUCK,
     });
   }
 
-  handleInputFormSubmit() {
+  handleInputFormSubmit = () => {
     const { items, value } = this.state;
     this.setState({
       items: [...items, value],
