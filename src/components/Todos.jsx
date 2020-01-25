@@ -1,46 +1,42 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable no-console */
 import React, { Component } from "react";
 import List from "./List";
+import InputForm from "./InputForm";
 
 class Todos extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "",
-      items: ["test 3", "test 4"],
+      value: "testtt",
+      items: ["KANKER", "KUT"],
     };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.handleInputFormChange = this.handleInputFormChange.bind(this);
+    this.handleInputFormSubmit = this.handleInputFormSubmit.bind(this);
   }
 
-  handleChange(event) {
+  handleInputFormChange(FUCK) {
     this.setState({
-      value: event.target.value.toUpperCase(),
+      value: FUCK,
     });
   }
 
-  handleSubmit(event) {
-    const { value, items } = this.state;
-    // pass it to the list?
+  handleInputFormSubmit() {
+    const { items, value } = this.state;
     this.setState({
-      value: "",
       items: [...items, value],
+      value: "",
     });
-    event.preventDefault();
   }
 
   render() {
-    const { value, items } = this.state;
+    const { items, value } = this.state;
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-          Todo:
-            <input type="text" name="name" value={value} onChange={this.handleChange} />
-          </label>
-          <input type="button" value="Submit" onClick={this.handleSubmit} />
-        </form>
+        <InputForm
+          onValueChange={this.handleInputFormChange}
+          value={value}
+          onCancer={this.handleInputFormSubmit}
+        />
         <List items={items} />
       </div>
     );
