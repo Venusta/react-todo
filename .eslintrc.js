@@ -19,6 +19,7 @@ module.exports = {
     sourceType: "module",
   },
   plugins: [
+    "babel",
     "react",
   ],
   settings: {

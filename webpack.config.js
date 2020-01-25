@@ -84,6 +84,7 @@ module.exports = {
           // We can pass options to both babel-loader and Babel. This option object
           // will replace babel.config.js
           options: {
+            plugins: ["@babel/plugin-proposal-class-properties"],
             presets: [
               ["@babel/preset-env", {
                 debug: false, // Output the targets/plugins used when compiling
