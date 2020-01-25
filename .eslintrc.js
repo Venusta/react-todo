@@ -21,7 +21,6 @@ module.exports = {
   },
   plugins: [
    "react",
-  //  "babel",
   ],
   settings: {
     react: {
