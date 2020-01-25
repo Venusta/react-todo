@@ -7,13 +7,13 @@ class Todos extends Component {
     super(props);
     this.state = {
       value: "testtt",
-      items: ["KANKER", "KUT"],
+      items: ["item 1", "item 2"],
     };
   }
 
-  handleInputFormChange = (FUCK) => {
+  handleInputFormChange = (value) => {
     this.setState({
-      value: FUCK,
+      value: value,
     });
   }
 
