@@ -18,11 +18,11 @@ class Todos extends Component {
   }
 
   handleInputFormSubmit = () => {
-    const { items, value } = this.state;
-    this.setState({
-      items: [...items, value],
+    const { value } = this.state;
+    this.setState((prevState) => ({
+      items: [...prevState.items, value],
       value: "",
-    });
+    }));
   }
 
   render() {
