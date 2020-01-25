@@ -10,7 +10,7 @@ export default class InputForm extends Component {
   }
 
   handleSubmit = (event) => {
-    this.props.onCancer();
+    this.props.onSubmit();
     event.preventDefault();
   }
 

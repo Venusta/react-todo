@@ -32,7 +32,7 @@ class Todos extends Component {
         <InputForm
           onValueChange={this.handleInputFormChange}
           value={value}
-          onCancer={this.handleInputFormSubmit}
+          onSubmit={this.handleInputFormSubmit}
         />
         <List items={items} />
       </div>
