@@ -1,17 +1,30 @@
-/* eslint-disable react/destructuring-assignment */
+/* eslint-disable no-console */
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { Component } from "react";
+import Checkbox from "./Checkbox";
 
-const TodoItem = (props) => (
-  <li>
-    {<input
-      name="isGoing"
-      type="checkbox"
-      // checked={this.state.isGoing} // TODO this shit http://react.tips/checkboxes-in-react-16/
-      // onChange={this.handleInputChange}
-    />}
-    {props.item}
-  </li>
-);
+class TodoItem extends Component {
+  state = {
+    isSelected: false,
+  }
+
+  handleCheckboxChange = (event) => {
+    console.log(event.target);
+    this.setState((prevState) => ({
+      isSelected: !prevState.isSelected,
+    }));
+  }
+
+  render() {
+    const { isSelected } = this.state;
+    const { item } = this.props;
+    return (
+      <li style={{ textDecoration: isSelected ? "line-through" : "none" }}>
+        <Checkbox isSelected={isSelected} onCheckboxChange={this.handleCheckboxChange} />
+        {item}
+      </li>
+    );
+  }
+}
 
 export default TodoItem;
