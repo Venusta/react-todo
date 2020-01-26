@@ -1,5 +1,4 @@
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
 
 import React, { Component } from "react";
@@ -18,15 +17,12 @@ export default class InputForm extends Component {
     const { value } = this.props;
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-        Todo:
-          <input
-            type="text"
-            name="name"
-            value={value}
-            onChange={this.handleChange}
-          />
-        </label>
+        <input
+          type="text"
+          name="name"
+          value={value}
+          onChange={this.handleChange}
+        />
         <button type="submit">Submit</button>
       </form>
     );
