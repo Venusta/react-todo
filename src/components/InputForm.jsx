@@ -24,11 +24,10 @@ export default class InputForm extends Component {
             type="text"
             name="name"
             value={value}
-            onSubmit={this.handleSubmit}
             onChange={this.handleChange}
           />
         </label>
-        <input type="button" value="Submit" onClick={this.handleSubmit} />
+        <button type="submit">Submit</button>
       </form>
     );
   }
