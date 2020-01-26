@@ -5,7 +5,10 @@ import InputForm from "./InputForm";
 class Todos extends Component {
   state = {
     value: "testtt",
-    items: ["item 1", "item 2"],
+    items: [
+      "item 1",
+      "item 2",
+    ],
   };
 
   handleInputFormChange = (value) => {
