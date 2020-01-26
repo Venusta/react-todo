@@ -3,13 +3,10 @@ import List from "./List";
 import InputForm from "./InputForm";
 
 class Todos extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      value: "testtt",
-      items: ["item 1", "item 2"],
-    };
-  }
+  state = {
+    value: "testtt",
+    items: ["item 1", "item 2"],
+  };
 
   handleInputFormChange = (value) => {
     this.setState({

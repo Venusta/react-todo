@@ -36,5 +36,6 @@ module.exports = {
       "error",
       "windows",
     ],
+    "react/state-in-constructor": ["error", "never"],
   },
 };
